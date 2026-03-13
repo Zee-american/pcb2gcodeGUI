@@ -59,7 +59,7 @@
          <enum>QTabWidget::Rounded</enum>
         </property>
         <property name="currentIndex">
-         <number>1</number> <!-- Initially selected tab -->
+         <number>2</number>
         </property>
         <property name="elideMode">
          <enum>Qt::ElideNone</enum>
@@ -318,7 +318,7 @@
            </item>
            <item row="8" column="0">
             <widget class="QLabel" name="basenameLabel">
-            <property name="toolTip">
+             <property name="toolTip">
               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Prefix for default output file names&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
              </property>
              <property name="text">
@@ -407,7 +407,7 @@
            <rect>
             <x>10</x>
             <y>10</y>
-            <width>531</width>
+            <width>534</width>
             <height>650</height>
            </rect>
           </property>
@@ -687,7 +687,7 @@
               <double>0.000010000000000</double>
              </property>
              <property name="value">
-              <double>0.00254000000000</double>
+              <double>0.002540000000000</double>
              </property>
             </widget>
            </item>
@@ -858,19 +858,19 @@
                 <string> mm </string>
                </property>
                <property name="decimals">
-                 <number>3</number>
+                <number>3</number>
                </property>
                <property name="minimum">
-                 <double>-10000.000000000000000</double>
+                <double>-10000.000000000000000</double>
                </property>
                <property name="maximum">
-                 <double>10000.000000000000000</double>
+                <double>10000.000000000000000</double>
                </property>
                <property name="singleStep">
-                 <double>1.000000000000000</double>
+                <double>1.000000000000000</double>
                </property>
                <property name="value">
-                 <double>0.000000000000000</double>
+                <double>0.000000000000000</double>
                </property>
               </widget>
              </item>
@@ -899,19 +899,19 @@
                 <string> mm </string>
                </property>
                <property name="decimals">
-                 <number>3</number>
+                <number>3</number>
                </property>
                <property name="minimum">
-                 <double>-10000.000000000000000</double>
+                <double>-10000.000000000000000</double>
                </property>
                <property name="maximum">
-                 <double>10000.000000000000000</double>
+                <double>10000.000000000000000</double>
                </property>
                <property name="singleStep">
-                 <double>1.000000000000000</double>
+                <double>1.000000000000000</double>
                </property>
                <property name="value">
-                 <double>0.000000000000000</double>
+                <double>0.000000000000000</double>
                </property>
               </widget>
              </item>
@@ -954,19 +954,19 @@
                 <string> s </string>
                </property>
                <property name="decimals">
-                 <number>3</number>
+                <number>3</number>
                </property>
                <property name="minimum">
-                 <double>0.001</double>
+                <double>0.001000000000000</double>
                </property>
                <property name="maximum">
-                 <double>20.000000000000000</double>
+                <double>20.000000000000000</double>
                </property>
                <property name="singleStep">
-                 <double>0.01</double>
+                <double>0.010000000000000</double>
                </property>
                <property name="value">
-                 <double>0.001</double>
+                <double>0.001000000000000</double>
                </property>
               </widget>
              </item>
@@ -995,19 +995,19 @@
                 <string> s </string>
                </property>
                <property name="decimals">
-                 <number>3</number>
+                <number>3</number>
                </property>
                <property name="minimum">
-                 <double>0.001</double>
+                <double>0.001000000000000</double>
                </property>
                <property name="maximum">
-                 <double>20.000000000000000</double>
+                <double>20.000000000000000</double>
                </property>
                <property name="singleStep">
-                 <double>0.01</double>
+                <double>0.010000000000000</double>
                </property>
                <property name="value">
-                 <double>0.001</double>
+                <double>0.001000000000000</double>
                </property>
               </widget>
              </item>
@@ -1038,8 +1038,8 @@
            <rect>
             <x>10</x>
             <y>10</y>
-            <width>430</width>
-            <height>411</height>
+            <width>486</width>
+            <height>529</height>
            </rect>
           </property>
           <layout class="QGridLayout" name="millGridLayout">
@@ -1049,6 +1049,74 @@
            <property name="verticalSpacing">
             <number>6</number>
            </property>
+           <item row="2" column="0">
+            <widget class="QLabel" name="millspeedLabel">
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--mill-speed&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Spindle speed during engraving&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="text">
+              <string>Spindle speed</string>
+             </property>
+             <property name="buddy">
+              <cstring>millspeedSpinBox</cstring>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0">
+            <widget class="QLabel" name="isolationwidthLabel">
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--isolation-width&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Minimum isolating separation between copper surfaces. This option is ignored when &lt;span style=&quot; font-style:italic;&quot;&gt;voronoi&lt;/span&gt; is in use.&lt;/p&gt;&lt;p&gt;Attention: values above 0.250 May take a &lt;span style=&quot; font-style:italic;&quot;&gt;Very Long Time!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="text">
+              <string>Isolation width</string>
+             </property>
+             <property name="buddy">
+              <cstring>isolationwidthDoubleSpinBox</cstring>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0">
+            <widget class="QLabel" name="milldiametersLabel">
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--mill-diameters&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Comma-separated list of available mill bits. Each entry must consist of a numeric value followed by a unit(inch,mm,m). Used in the order that they are provided&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="text">
+              <string>Available mill diameters</string>
+             </property>
+             <property name="buddy">
+              <cstring>milldiametersLineEdit</cstring>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QCheckBox" name="preserveThermalRelievesCheckBox">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--preserve-thermal-reliefs&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Generate mill paths for thermal reliefs in voronoi mode.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="text">
+              <string>Preserve thermal reliefs</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="14" column="0">
+            <widget class="QCheckBox" name="drawgerberlinesCheckBox">
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;--draw-gerber-lines&lt;/p&gt;&lt;p&gt;Draw lines in the gerber file as just lines and not as filled in shapes&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="text">
+              <string>Draw gerbers lines</string>
+             </property>
+             <property name="checked">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
            <item row="0" column="0">
             <widget class="QLabel" name="zworkLabel">
              <property name="toolTip">
@@ -1059,6 +1127,131 @@
              </property>
              <property name="buddy">
               <cstring>zworkDoubleSpinBox</cstring>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="1">
+            <widget class="QSpinBox" name="millvertfeedSpinBox">
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--mill-vertfeed&lt;/span&gt;&lt;/p&gt;&lt;p&gt;vertical feed while isolating in [in/min] or [mm/min].&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="suffix">
+              <string> mm/min</string>
+             </property>
+             <property name="maximum">
+              <number>10000</number>
+             </property>
+             <property name="singleStep">
+              <number>10</number>
+             </property>
+             <property name="value">
+              <number>0</number>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="0">
+            <widget class="QLabel" name="premillingcodeLabel">
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--pre-milling-gcode&lt;/span&gt;&lt;/p&gt;&lt;p&gt;custom gcode inserted before the start of milling each trace (used to activate pump or fan or laser connected to fan).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="text">
+              <string>Milling start custom command</string>
+             </property>
+             <property name="buddy">
+              <cstring>premillingcodeLineEdit</cstring>
+             </property>
+            </widget>
+           </item>
+           <item row="16" column="0" colspan="2">
+            <spacer name="verticalSpacer_3">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="8" column="1">
+            <widget class="QLineEdit" name="premillingcodeLineEdit">
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--pre-milling-gcode&lt;/span&gt;&lt;/p&gt;&lt;p&gt;custom gcode inserted before the start of milling each trace (used to activate pump or fan or laser connected to fan).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="placeholderText">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="0">
+            <widget class="QLabel" name="millvertfeedLabel">
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--mill-vertfeed&lt;/span&gt;&lt;/p&gt;&lt;p&gt;vertical feed while isolating in [in/min] or [mm/min].&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="text">
+              <string>Milling vertical feed</string>
+             </property>
+             <property name="buddy">
+              <cstring>millvertfeedSpinBox</cstring>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="1">
+            <widget class="QDoubleSpinBox" name="isolationwidthDoubleSpinBox">
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--isolation-width&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Minimum isolating separation between copper surfaces. This option is ignored when &lt;span style=&quot; font-style:italic;&quot;&gt;voronoi&lt;/span&gt; is in use.&lt;/p&gt;&lt;p&gt;Attention: values above 0.250 May take a &lt;span style=&quot; font-style:italic;&quot;&gt;Very Long Time!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="suffix">
+              <string> mm</string>
+             </property>
+             <property name="decimals">
+              <number>3</number>
+             </property>
+             <property name="minimum">
+              <double>0.000000000000000</double>
+             </property>
+             <property name="maximum">
+              <double>100.000000000000000</double>
+             </property>
+             <property name="singleStep">
+              <double>0.050000000000000</double>
+             </property>
+             <property name="value">
+              <double>0.000000000000000</double>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QSpinBox" name="millspeedSpinBox">
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--mill-speed&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Spindle speed during engraving&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="suffix">
+              <string> rpm</string>
+             </property>
+             <property name="maximum">
+              <number>100000</number>
+             </property>
+             <property name="singleStep">
+              <number>500</number>
+             </property>
+             <property name="value">
+              <number>10000</number>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="millfeedLabel">
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--mill-feed&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Feed rate at which engraving takes place (horizontal speed)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="text">
+              <string>Horizontal mill speed</string>
+             </property>
+             <property name="buddy">
+              <cstring>millfeedSpinBox</cstring>
              </property>
             </widget>
            </item>
@@ -1087,16 +1280,16 @@
              </property>
             </widget>
            </item>
-           <item row="1" column="0">
-            <widget class="QLabel" name="millfeedLabel">
+           <item row="9" column="0">
+            <widget class="QLabel" name="postmillingcodeLabel">
              <property name="toolTip">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--mill-feed&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Feed rate at which engraving takes place (horizontal speed)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--post-milling-gcode&lt;/span&gt;&lt;/p&gt;&lt;p&gt;custom gcode inserted after the end of milling each trace (used to deactivate pump or fan or laser connected to fan).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
              </property>
              <property name="text">
-              <string>Horizontal mill speed</string>
+              <string>Milling end custom command</string>
              </property>
              <property name="buddy">
-              <cstring>millfeedSpinBox</cstring>
+              <cstring>postmillingcodeLineEdit</cstring>
              </property>
             </widget>
            </item>
@@ -1119,35 +1312,113 @@
              </property>
             </widget>
            </item>
-           <item row="2" column="0">
-            <widget class="QLabel" name="millspeedLabel">
+           <item row="6" column="1">
+            <widget class="QLineEdit" name="milldiametersLineEdit">
              <property name="toolTip">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--mill-speed&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Spindle speed during engraving&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--mill-diameters&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Comma-separated list of available mill bits. Each entry must consist of a numeric value followed by a unit(inch,mm,m). Used in the order that they are provided&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
              </property>
-             <property name="text">
-              <string>Spindle speed</string>
-             </property>
-             <property name="buddy">
-              <cstring>millspeedSpinBox</cstring>
+             <property name="placeholderText">
+              <string>0mm,0.001inch,0.4mm</string>
              </property>
             </widget>
            </item>
-           <item row="2" column="1">
-            <widget class="QSpinBox" name="millspeedSpinBox">
+           <item row="11" column="1">
+            <widget class="QDoubleSpinBox" name="millinfeedDoubleSpinBox">
              <property name="toolTip">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--mill-speed&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Spindle speed during engraving&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--mill-infeed&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Maximum milling depth per pass. PCB may be cut in multiple passes&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
              </property>
              <property name="suffix">
-              <string> rpm</string>
+              <string> mm</string>
+             </property>
+             <property name="decimals">
+              <number>3</number>
+             </property>
+             <property name="minimum">
+              <double>-1000.000000000000000</double>
              </property>
              <property name="maximum">
-              <number>100000</number>
+              <double>0.000000000000000</double>
              </property>
              <property name="singleStep">
-              <number>500</number>
+              <double>0.001000000000000</double>
              </property>
              <property name="value">
-              <number>10000</number>
+              <double>0.000000000000000</double>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="offsetLabel">
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--offset * 2&lt;/span&gt;&lt;/p&gt;&lt;p&gt;distance by which the tool movement will be outset from the contours in the gerber file to be engraved. If you want to obtain a PCB as similar as possible to the original file, you should set this value to half of the tool diameter. If this distance can't be satisfied because copper areas are too close, a warning will be printed and the line will be drawn between the areas. This behavior can be used to get voronoi-style (flood-filling) areas; sim‐ply set the offset to a large value (like 1 inch). When the vectorial mode is in use, --voronoi is preferred.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="text">
+              <string>Toolpath offset</string>
+             </property>
+             <property name="buddy">
+              <cstring>offsetDoubleSpinBox</cstring>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="1">
+            <widget class="QLineEdit" name="postmillingcodeLineEdit">
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--post-milling-gcode&lt;/span&gt;&lt;/p&gt;&lt;p&gt;custom gcode inserted after the end of milling each trace (used to deactivate pump or fan or laser connected to fan).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="placeholderText">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="11" column="0">
+            <widget class="QLabel" name="millinfeedLabel">
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--mill-infeed&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Maximum milling depth per pass. PCB may be cut in multiple passes&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="text">
+              <string>Milling depth per pass</string>
+             </property>
+             <property name="buddy">
+              <cstring>millinfeedDoubleSpinBox</cstring>
+             </property>
+            </widget>
+           </item>
+           <item row="13" column="0">
+            <widget class="QCheckBox" name="invertgerbersCheckBox">
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;--invert-gerbers&lt;/p&gt;&lt;p&gt;Invert polarity of front and back gerbers, causing the milling to occur inside the shapes&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="text">
+              <string>Invert gerbers</string>
+             </property>
+             <property name="checked">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="12" column="0">
+            <widget class="QLabel" name="millingdirectionLabel">
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--mill-feed-direction&lt;/span&gt;&lt;/p&gt;&lt;p&gt;In which direction should all milling occur. Can't use it together with tsp-2opt optimization&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="text">
+              <string>Milling direction</string>
+             </property>
+             <property name="buddy">
+              <cstring>millingdirectionComboBox</cstring>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="0">
+            <widget class="QLabel" name="milloverlapLabel">
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--milling-overlap&lt;/span&gt;&lt;/p&gt;&lt;p&gt;How much to overlap milling passes, from 0% to 100% or an absolute length&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="text">
+              <string>Milling overlap</string>
+             </property>
+             <property name="buddy">
+              <cstring>milloverlapLineEdit</cstring>
              </property>
             </widget>
            </item>
@@ -1161,35 +1432,6 @@
              </property>
              <property name="text">
               <string>Voronoi regions</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="1">
-            <widget class="QCheckBox" name="preserveThermalRelievesCheckBox">
-              <property name="enabled">
-                <bool>false</bool>
-              </property>
-              <property name="checked">
-                <bool>true</bool>
-             </property>
-              <property name="toolTip">
-                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--preserve-thermal-reliefs&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Generate mill paths for thermal reliefs in voronoi mode.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-              </property>
-              <property name="text">
-                <string>Preserve thermal reliefs</string>
-              </property>
-            </widget>
-           </item>
-           <item row="4" column="0">
-            <widget class="QLabel" name="offsetLabel">
-             <property name="toolTip">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--offset * 2&lt;/span&gt;&lt;/p&gt;&lt;p&gt;distance by which the tool movement will be outset from the contours in the gerber file to be engraved. If you want to obtain a PCB as similar as possible to the original file, you should set this value to half of the tool diameter. If this distance can't be satisfied because copper areas are too close, a warning will be printed and the line will be drawn between the areas. This behavior can be used to get voronoi-style (flood-filling) areas; sim‐ply set the offset to a large value (like 1 inch). When the vectorial mode is in use, --voronoi is preferred.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-             <property name="text">
-              <string>Toolpath offset</string>
-             </property>
-             <property name="buddy">
-              <cstring>offsetDoubleSpinBox</cstring>
              </property>
             </widget>
            </item>
@@ -1218,226 +1460,23 @@
              </property>
             </widget>
            </item>
-           <item row="5" column="0">
-            <widget class="QLabel" name="isolationwidthLabel">
-             <property name="toolTip">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--isolation-width&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Minimum isolating separation between copper surfaces. This option is ignored when &lt;em&gt;voronoi&lt;/em&gt; is in use.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-             <property name="text">
-              <string>Isolation width</string>
-             </property>
-             <property name="buddy">
-              <cstring>isolationwidthDoubleSpinBox</cstring>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="1">
-            <widget class="QDoubleSpinBox" name="isolationwidthDoubleSpinBox">
-             <property name="toolTip">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--isolation-width&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Minimum isolating separation between copper surfaces. This option is ignored when &lt;em&gt;voronoi&lt;/em&gt; is in use.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-             <property name="suffix">
-              <string> mm</string>
-             </property>
-             <property name="decimals">
-              <number>3</number>
-             </property>
-             <property name="minimum">
-              <double>0.000000000000000</double>
-             </property>
-             <property name="maximum">
-              <double>100.000000000000000</double>
-             </property>
-             <property name="singleStep">
-              <double>0.050000000000000</double>
-             </property>
-             <property name="value">
-              <double>0.000000000000000</double>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="0">
-            <widget class="QLabel" name="milldiametersLabel">
-             <property name="toolTip">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--mill-diameters&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Comma-separated list of available mill bits. Each entry must consist of a numeric value followed by a unit(inch,mm,m). Used in the order that they are provided&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-             <property name="text">
-              <string>Available mill diameters</string>
-             </property>
-             <property name="buddy">
-              <cstring>milldiametersLineEdit</cstring>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="1">
-            <widget class="QLineEdit" name="milldiametersLineEdit">
-             <property name="toolTip">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--mill-diameters&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Comma-separated list of available mill bits. Each entry must consist of a numeric value followed by a unit(inch,mm,m). Used in the order that they are provided&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-             <property name="placeholderText">
-              <string>0mm,0.001inch,0.4mm</string>
-             </property>
-            </widget>
-           </item>
-           <item row="7" column="0">
-            <widget class="QLabel" name="milloverlapLabel">
-             <property name="toolTip">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--milling-overlap&lt;/span&gt;&lt;/p&gt;&lt;p&gt;How much to overlap milling passes, from 0% to 100% or an absolute length&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-             <property name="text">
-              <string>Milling overlap</string>
-             </property>
-             <property name="buddy">
-              <cstring>milloverlapLineEdit</cstring>
-             </property>
-            </widget>
-           </item>
            <item row="7" column="1">
             <widget class="QLineEdit" name="milloverlapLineEdit">
-              <property name="toolTip">
-                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--milling-overlap&lt;/span&gt;&lt;/p&gt;&lt;p&gt;How much to overlap milling passes, from 0% to 100% or an absolute length&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--milling-overlap&lt;/span&gt;&lt;/p&gt;&lt;p&gt;How much to overlap milling passes, from 0% to 100% or an absolute length&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
              </property>
              <property name="placeholderText">
               <string>50%/12mm/0.3in</string>
              </property>
             </widget>
            </item>
-           <item row="8" column="0">
-            <widget class="QLabel" name="premillingcodeLabel">
-             <property name="toolTip">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--pre-milling-gcode&lt;/span&gt;&lt;/p&gt;&lt;p&gt;custom gcode inserted before the start of milling each trace (used to activate pump or fan or laser connected to fan).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-             <property name="text">
-              <string>Milling start custom command</string>
-             </property>
-             <property name="buddy">
-              <cstring>premillingcodeLineEdit</cstring>
-             </property>
-            </widget>
-           </item>
-           <item row="8" column="1">
-            <widget class="QLineEdit" name="premillingcodeLineEdit">
-             <property name="toolTip">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--pre-milling-gcode&lt;/span&gt;&lt;/p&gt;&lt;p&gt;custom gcode inserted before the start of milling each trace (used to activate pump or fan or laser connected to fan).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-             <property name="placeholderText">
-              <string/>
-             </property>
-            </widget>
-           </item>
-           <item row="9" column="0">
-            <widget class="QLabel" name="postmillingcodeLabel">
-             <property name="toolTip">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--post-milling-gcode&lt;/span&gt;&lt;/p&gt;&lt;p&gt;custom gcode inserted after the end of milling each trace (used to deactivate pump or fan or laser connected to fan).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-             <property name="text">
-              <string>Milling end custom command</string>
-             </property>
-             <property name="buddy">
-              <cstring>postmillingcodeLineEdit</cstring>
-             </property>
-            </widget>
-           </item>
-           <item row="9" column="1">
-            <widget class="QLineEdit" name="postmillingcodeLineEdit">
-             <property name="toolTip">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--post-milling-gcode&lt;/span&gt;&lt;/p&gt;&lt;p&gt;custom gcode inserted after the end of milling each trace (used to deactivate pump or fan or laser connected to fan).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-             <property name="placeholderText">
-              <string/>
-             </property>
-            </widget>
-           </item>
-           <item row="10" column="0">
-            <widget class="QLabel" name="millvertfeedLabel">
-             <property name="toolTip">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--mill-vertfeed&lt;/span&gt;&lt;/p&gt;&lt;p&gt;vertical feed while isolating in [in/min] or [mm/min].&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-             <property name="text">
-              <string>Milling vertical feed</string>
-             </property>
-             <property name="buddy">
-              <cstring>millvertfeedSpinBox</cstring>
-             </property>
-            </widget>
-           </item>
-           <item row="10" column="1">
-            <widget class="QSpinBox" name="millvertfeedSpinBox">
-             <property name="toolTip">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--mill-vertfeed&lt;/span&gt;&lt;/p&gt;&lt;p&gt;vertical feed while isolating in [in/min] or [mm/min].&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-             <property name="suffix">
-              <string> mm/min</string>
-             </property>
-             <property name="maximum">
-              <number>10000</number>
-             </property>
-             <property name="singleStep">
-              <number>10</number>
-             </property>
-             <property name="value">
-              <number>0</number>
-             </property>
-            </widget>
-           </item>
-           <item row="11" column="0">
-            <widget class="QLabel" name="millinfeedLabel">
-             <property name="toolTip">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--mill-infeed&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Maximum milling depth per pass. PCB may be cut in multiple passes&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-             <property name="text">
-              <string>Milling depth per pass</string>
-             </property>
-             <property name="buddy">
-              <cstring>millinfeedDoubleSpinBox</cstring>
-             </property>
-            </widget>
-           </item>
-           <item row="11" column="1">
-            <widget class="QDoubleSpinBox" name="millinfeedDoubleSpinBox">
-             <property name="toolTip">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--mill-infeed&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Maximum milling depth per pass. PCB may be cut in multiple passes&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-             <property name="suffix">
-              <string> mm</string>
-             </property>
-             <property name="decimals">
-              <number>3</number>
-             </property>
-             <property name="minimum">
-              <double>-1000.000000000000000</double>
-             </property>
-             <property name="maximum">
-              <double>0.000000000000000</double>
-             </property>
-             <property name="singleStep">
-              <double>0.001000000000000</double>
-             </property>
-             <property name="value">
-              <double>0.0000</double>
-             </property>
-            </widget>
-           </item>
-           <item row="12" column="0">
-            <widget class="QLabel" name="millingdirectionLabel">
-             <property name="toolTip">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--mill-feed-direction&lt;/span&gt;&lt;/p&gt;&lt;p&gt;In which direction should all milling occur. Can't use it together with tsp-2opt optimization&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-             <property name="text">
-              <string>Milling direction</string>
-             </property>
-             <property name="buddy">
-              <cstring>millingdirectionComboBox</cstring>
-             </property>
-            </widget>
-           </item>
            <item row="12" column="1" colspan="2">
             <widget class="QComboBox" name="millingdirectionComboBox">
-             <property name="toolTip">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--mill-feed-direction&lt;/span&gt;&lt;/p&gt;&lt;p&gt;In which direction should all milling occur. Can't use it together with tsp-2opt optimization&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
              <property name="enabled">
               <bool>false</bool>
+             </property>
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--mill-feed-direction&lt;/span&gt;&lt;/p&gt;&lt;p&gt;In which direction should all milling occur. Can't use it together with tsp-2opt optimization&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
              </property>
              <item>
               <property name="text">
@@ -1456,44 +1495,15 @@
              </item>
             </widget>
            </item>
-           <item row="13" column="0">
-            <widget class="QCheckBox" name="invertgerbersCheckBox">
+           <item row="15" column="0">
+            <widget class="QCheckBox" name="outsideInCheckBox">
              <property name="toolTip">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;--invert-gerbers&lt;/p&gt;&lt;p&gt;Invert polarity of front and back gerbers, causing the milling to occur inside the shapes&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;--mill-outside-in. Use with --invert-gerbers for milling pads with holes, So the float-bit does not crash.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
              </property>
              <property name="text">
-              <string>Invert gerbers</string>
-             </property>
-             <property name="checked">
-              <bool>false</bool>
+              <string>Mill outside in</string>
              </property>
             </widget>
-           </item>
-           <item row="14" column="0">
-            <widget class="QCheckBox" name="drawgerberlinesCheckBox">
-             <property name="toolTip">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;--draw-gerber-lines&lt;/p&gt;&lt;p&gt;Draw lines in the gerber file as just lines and not as filled in shapes&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-             <property name="text">
-              <string>Draw gerbers lines</string>
-             </property>
-             <property name="checked">
-              <bool>false</bool>
-             </property>
-            </widget>
-           </item>
-           <item row="15" column="0" colspan="2">
-            <spacer name="verticalSpacer_3">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>20</width>
-               <height>40</height>
-              </size>
-             </property>
-            </spacer>
            </item>
           </layout>
          </widget>
@@ -1508,7 +1518,7 @@
             <x>10</x>
             <y>10</y>
             <width>522</width>
-            <height>421</height>
+            <height>436</height>
            </rect>
           </property>
           <layout class="QGridLayout" name="drillGridLayout">
@@ -1657,134 +1667,134 @@
            </item>
            <item row="4" column="0" colspan="3">
             <widget class="QGroupBox" name="milldrillGroupBox">
-              <property name="title">
-                <string>Milldrill (hole milling)</string>
+             <property name="title">
+              <string>Milldrill (hole milling)</string>
+             </property>
+             <layout class="QGridLayout" name="milldrillGridLayout">
+              <property name="horizontalSpacing">
+               <number>12</number>
               </property>
-              <layout class="QGridLayout" name="milldrillGridLayout">
-                <property name="horizontalSpacing">
-                  <number>12</number>
+              <property name="verticalSpacing">
+               <number>3</number>
+              </property>
+              <item row="0" column="0">
+               <widget class="QLabel" name="milldrillEnableLabel">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--min-milldrill-hole-diameter&lt;/span&gt;&lt;/p&gt;&lt;p&gt;minimum hole width for milldrilling. Holes smaller than this are drilled. Zero to disable milldrilling.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
-                <property name="verticalSpacing">
-                  <number>3</number>
+                <property name="text">
+                 <string>Minimum diameter</string>
                 </property>
-                <item row="0" column="0">
-                  <widget class="QLabel" name="milldrillEnableLabel">
-                  <property name="toolTip">
-                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--min-milldrill-hole-diameter&lt;/span&gt;&lt;/p&gt;&lt;p&gt;minimum hole width for milldrilling. Holes smaller than this are drilled. Zero to disable milldrilling.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                  </property>
-                  <property name="text">
-                    <string>Minimum diameter</string>
-                  </property>
-                  <property name="buddy">
-                    <cstring>milldrillholediameterDoubleSpinBox</cstring>
-                  </property>
-                  </widget>
-                </item>
-                <item row="0" column="1" colspan="2">
-                  <widget class="QDoubleSpinBox" name="milldrillholediameterDoubleSpinBox">
-                  <property name="enabled">
-                    <bool>true</bool>
-                  </property>
-                  <property name="toolTip">
-                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--min-milldrill-hole-diameter&lt;/span&gt;&lt;/p&gt;&lt;p&gt;minimum hole width for milldrilling. Holes smaller than this are drilled. Zero to disable milldrilling.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                  </property>
-                  <property name="suffix">
-                    <string> mm</string>
-                  </property>
-                  <property name="decimals">
-                    <number>3</number>
-                  </property>
-                  <property name="maximum">
-                    <double>100.000000000000000</double>
-                  </property>
-                  <property name="singleStep">
-                    <double>0.100000000000000</double>
-                  </property>
-                  <property name="value">
-                    <double>0</double>
-                  </property>
-                  </widget>
-                </item>
-                <item row="1" column="0">
-                  <widget class="QLabel" name="milldrillLabel">
-                  <property name="toolTip">
-                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--milldrill-diameter&lt;/span&gt;&lt;/p&gt;&lt;p&gt;diameter of milling head which is used with --milldrill; the default value is same as --cutter-diameter.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                  </property>
-                  <property name="text">
-                    <string>Tool diameter</string>
-                  </property>
-                  <property name="buddy">
-                    <cstring>milldrilldiameterDoubleSpinBox</cstring>
-                  </property>
-                  </widget>
-                </item>
-                <item row="1" column="1" colspan="2">
-                  <widget class="QDoubleSpinBox" name="milldrilldiameterDoubleSpinBox">
-                  <property name="enabled">
-                    <bool>false</bool>
-                  </property>
-                  <property name="toolTip">
-                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--milldrill-diameter&lt;/span&gt;&lt;/p&gt;&lt;p&gt;diameter of milling head which is used with --milldrill; the default value is same as --cutter-diameter.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                  </property>
-                  <property name="suffix">
-                    <string> mm</string>
-                  </property>
-                  <property name="decimals">
-                    <number>3</number>
-                  </property>
-                  <property name="maximum">
-                    <double>100.000000000000000</double>
-                  </property>
-                  <property name="singleStep">
-                    <double>0.100000000000000</double>
-                  </property>
-                  <property name="value">
-                    <double>3.000000000000000</double>
-                  </property>
-                  </widget>
-                </item>
-                <item row="2" column="0">
-                  <widget class="QLabel" name="zmilldrillLabel">
-                  <property name="toolTip">
-                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--zmilldrill&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Z value down to which will be milldrilled&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                  </property>
-                  <property name="text">
-                    <string>Depth</string>
-                  </property>
-                  <property name="buddy">
-                    <cstring>zdrillDoubleSpinBox</cstring>
-                  </property>
-                  </widget>
-                </item>
-                <item row="2" column="1" colspan="2">
-                  <widget class="QDoubleSpinBox" name="zmilldrillDoubleSpinBox">
-                  <property name="toolTip">
-                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--zmilldrill&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Z value down to which will be milldrilled&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                  </property>
-                  <property name="enabled">
-                    <bool>false</bool>
-                  </property>
-                  <property name="suffix">
-                    <string> mm</string>
-                  </property>
-                  <property name="decimals">
-                    <number>3</number>
-                  </property>
-                  <property name="minimum">
-                    <double>-1000.000000000000000</double>
-                  </property>
-                  <property name="maximum">
-                    <double>0.000000000000000</double>
-                  </property>
-                  <property name="singleStep">
-                    <double>0.050000000000000</double>
-                  </property>
-                  <property name="value">
-                    <double>-2.500000000000000</double>
-                  </property>
-                  </widget>
-                </item>
-              </layout>
+                <property name="buddy">
+                 <cstring>milldrillholediameterDoubleSpinBox</cstring>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1" colspan="2">
+               <widget class="QDoubleSpinBox" name="milldrillholediameterDoubleSpinBox">
+                <property name="enabled">
+                 <bool>true</bool>
+                </property>
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--min-milldrill-hole-diameter&lt;/span&gt;&lt;/p&gt;&lt;p&gt;minimum hole width for milldrilling. Holes smaller than this are drilled. Zero to disable milldrilling.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="suffix">
+                 <string> mm</string>
+                </property>
+                <property name="decimals">
+                 <number>3</number>
+                </property>
+                <property name="maximum">
+                 <double>100.000000000000000</double>
+                </property>
+                <property name="singleStep">
+                 <double>0.100000000000000</double>
+                </property>
+                <property name="value">
+                 <double>0.000000000000000</double>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="milldrillLabel">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--milldrill-diameter&lt;/span&gt;&lt;/p&gt;&lt;p&gt;diameter of milling head which is used with --milldrill; the default value is same as --cutter-diameter.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Tool diameter</string>
+                </property>
+                <property name="buddy">
+                 <cstring>milldrilldiameterDoubleSpinBox</cstring>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1" colspan="2">
+               <widget class="QDoubleSpinBox" name="milldrilldiameterDoubleSpinBox">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--milldrill-diameter&lt;/span&gt;&lt;/p&gt;&lt;p&gt;diameter of milling head which is used with --milldrill; the default value is same as --cutter-diameter.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="suffix">
+                 <string> mm</string>
+                </property>
+                <property name="decimals">
+                 <number>3</number>
+                </property>
+                <property name="maximum">
+                 <double>100.000000000000000</double>
+                </property>
+                <property name="singleStep">
+                 <double>0.100000000000000</double>
+                </property>
+                <property name="value">
+                 <double>3.000000000000000</double>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="zmilldrillLabel">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--zmilldrill&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Z value down to which will be milldrilled&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="text">
+                 <string>Depth</string>
+                </property>
+                <property name="buddy">
+                 <cstring>zdrillDoubleSpinBox</cstring>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1" colspan="2">
+               <widget class="QDoubleSpinBox" name="zmilldrillDoubleSpinBox">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--zmilldrill&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Z value down to which will be milldrilled&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="suffix">
+                 <string> mm</string>
+                </property>
+                <property name="decimals">
+                 <number>3</number>
+                </property>
+                <property name="minimum">
+                 <double>-1000.000000000000000</double>
+                </property>
+                <property name="maximum">
+                 <double>0.000000000000000</double>
+                </property>
+                <property name="singleStep">
+                 <double>0.050000000000000</double>
+                </property>
+                <property name="value">
+                 <double>-2.500000000000000</double>
+                </property>
+               </widget>
+              </item>
+             </layout>
             </widget>
            </item>
            <item row="5" column="0">
@@ -1825,11 +1835,11 @@
            </item>
            <item row="7" column="0">
             <widget class="QCheckBox" name="nom6CheckBox">
-             <property name="toolTip">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--nom6&lt;/span&gt;&lt;/p&gt;&lt;p&gt;do not emit M6 on tool changes&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
              <property name="enabled">
               <bool>false</bool>
+             </property>
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--nom6&lt;/span&gt;&lt;/p&gt;&lt;p&gt;do not emit M6 on tool changes&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
              </property>
              <property name="text">
               <string>Remove M6 from G-code</string>
@@ -2724,7 +2734,7 @@
               <number>50</number>
              </property>
              <property name="value">
-              <double>1270</double>
+              <number>1270</number>
              </property>
             </widget>
            </item>
@@ -2759,7 +2769,7 @@
               <number>50</number>
              </property>
              <property name="value">
-              <double>2540</double>
+              <number>2540</number>
              </property>
             </widget>
            </item>
@@ -2794,7 +2804,7 @@
               <number>1</number>
              </property>
              <property name="value">
-              <double>0</double>
+              <number>0</number>
              </property>
             </widget>
            </item>
@@ -2943,7 +2953,7 @@
      <x>0</x>
      <y>0</y>
      <width>1007</width>
-     <height>43</height>
+     <height>24</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
